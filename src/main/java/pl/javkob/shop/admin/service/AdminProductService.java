@@ -12,7 +12,20 @@ import pl.javkob.shop.admin.repository.AdminProductRepository;
 public class AdminProductService {
 
     private final AdminProductRepository productRepository;
-    public Page<AdminProduct> getProducts(Pageable pagable){
+
+    public Page<AdminProduct> getProducts(Pageable pagable) {
         return productRepository.findAll(pagable);
+    }
+
+    public AdminProduct getProduct(Long id) {
+        return  productRepository.findById(id).orElseThrow();
+    }
+
+    public AdminProduct createProduct(AdminProduct product) {
+        return productRepository.save(product);
+    }
+
+    public AdminProduct updateProduct(AdminProduct product) {
+        return productRepository.save(product);
     }
 }

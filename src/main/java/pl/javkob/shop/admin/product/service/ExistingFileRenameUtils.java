@@ -1,4 +1,4 @@
-package pl.javkob.shop.admin.service;
+package pl.javkob.shop.admin.product.service;
 
 import org.apache.commons.io.FilenameUtils;
 
@@ -32,7 +32,6 @@ public class ExistingFileRenameUtils {
 
     private static String renameFileName(String fileName) {
         String name = FilenameUtils.getBaseName(fileName);
-        // test-1
         String[] split = name.split("-(?=[0-9]+$)");
         int counter = split.length > 1 ? Integer.parseInt(split[1]) + 1 : 1;
         return split[0] + "-" + counter + "." + FilenameUtils.getExtension(fileName);

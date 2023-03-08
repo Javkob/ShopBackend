@@ -1,8 +1,7 @@
-package pl.javkob.shop.admin.controller;
+package pl.javkob.shop.admin.product.controller;
 
 import com.github.slugify.Slugify;
 import lombok.RequiredArgsConstructor;
-import org.springframework.core.io.FileSystemResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,20 +9,17 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import pl.javkob.shop.admin.controller.dto.AdminProductDto;
-import pl.javkob.shop.admin.controller.dto.UploadResponse;
-import pl.javkob.shop.admin.model.AdminProduct;
-import pl.javkob.shop.admin.service.AdminProductImageService;
-import pl.javkob.shop.admin.service.AdminProductService;
+import pl.javkob.shop.admin.product.controller.dto.AdminProductDto;
+import pl.javkob.shop.admin.product.controller.dto.UploadResponse;
+import pl.javkob.shop.admin.product.model.AdminProduct;
+import pl.javkob.shop.admin.product.service.AdminProductImageService;
+import pl.javkob.shop.admin.product.service.AdminProductService;
 
 import javax.validation.Valid;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Locale;
 
 @RestController
 @RequiredArgsConstructor
@@ -63,9 +59,9 @@ public class AdminProductController {
 
     @PostMapping("/admin/products/upload-image")
     public UploadResponse uploadImage(@RequestParam("file") MultipartFile multipartFile) {
-        String fileName = multipartFile.getOriginalFilename();
+//        String fileName = multipartFile.getOriginalFilename();
         try (InputStream inputStream = multipartFile.getInputStream()) {
-            String savedFileName = adminProductImageService.uploadImage(fileName, inputStream);
+            String savedFileName = adminProductImageService.uploadImage(multipartFile.getOriginalFilename(), inputStream);
             return new UploadResponse(savedFileName);
         } catch (IOException e) {
             throw new RuntimeException("Bląd wgrywania pliku", e);

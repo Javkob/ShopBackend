@@ -2,8 +2,8 @@ package pl.javkob.shop.admin.service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
+import pl.javkob.shop.admin.product.service.ExistingFileRenameUtils;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

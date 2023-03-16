@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.javkob.shop.review.controller.dto.ReviewDto;
-import pl.javkob.shop.review.model.Review;
+import pl.javkob.shop.common.model.Review;
 import pl.javkob.shop.review.service.ReviewService;
 
 import javax.validation.Valid;

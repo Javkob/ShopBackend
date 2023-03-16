@@ -1,4 +1,4 @@
-package pl.javkob.shop.review.model;
+package pl.javkob.shop.common.model;
 
 
 import lombok.AllArgsConstructor;

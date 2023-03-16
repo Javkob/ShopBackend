@@ -1,9 +1,9 @@
-package pl.javkob.shop.product.repository;
+package pl.javkob.shop.common.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import pl.javkob.shop.product.model.Product;
+import pl.javkob.shop.common.model.Product;
 
 
 import java.util.Optional;

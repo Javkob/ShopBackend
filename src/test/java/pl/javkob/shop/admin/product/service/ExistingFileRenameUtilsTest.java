@@ -1,4 +1,4 @@
-package pl.javkob.shop.admin.service;
+package pl.javkob.shop.admin.product.service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;

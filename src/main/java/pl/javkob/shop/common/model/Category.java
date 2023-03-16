@@ -1,13 +1,8 @@
-package pl.javkob.shop.category.model;
+package pl.javkob.shop.common.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import pl.javkob.shop.product.model.Product;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Getter

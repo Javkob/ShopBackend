@@ -10,10 +10,9 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import pl.javkob.shop.product.controller.dto.ProductListDTO;
-import pl.javkob.shop.product.model.Product;
+import pl.javkob.shop.common.dto.ProductListDTO;
+import pl.javkob.shop.common.model.Product;
 import pl.javkob.shop.product.service.ProductService;
 
 import javax.validation.constraints.Pattern;

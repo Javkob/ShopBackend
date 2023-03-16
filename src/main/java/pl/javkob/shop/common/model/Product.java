@@ -1,9 +1,8 @@
-package pl.javkob.shop.product.model;
+package pl.javkob.shop.common.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import pl.javkob.shop.review.model.Review;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

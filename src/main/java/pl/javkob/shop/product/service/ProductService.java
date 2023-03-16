@@ -2,11 +2,10 @@ package pl.javkob.shop.product.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import pl.javkob.shop.product.model.Product;
-import pl.javkob.shop.product.repository.ProductRepository;
+import pl.javkob.shop.common.model.Product;
+import pl.javkob.shop.common.repository.ProductRepository;
 
 @Service
 @RequiredArgsConstructor
